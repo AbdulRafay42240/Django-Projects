@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Parking System - Parked Vehicles</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('/static/view-pic.jpg') no-repeat center center fixed;
+            background-size: cover;
+            background-attachment: fixed;
+            color: #fff;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 300px;
+            width: 500px;
+            background-color: rgba(20, 20, 20, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: auto;
+            margin-top: 100px; /* Increase top margin */
+        }
+
+        p {
+            color: #fff;
+            text-align: center;
+            margin: 0;
+        }
+
+        .back-to-home-button {
+            background-color: #8BC34A; /* Light green color */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Car Parking System - Parked Vehicles</h1>
+    </header>
+
+    <div class="form-container">
+        <h5>
+            <ul>
+                {% for car_plate, car_name in data.items %}
+                    <li>{{ car_plate }}: {{ car_name }}</li>
+                {% endfor %}
+            </ul>
+        </h5>
+
+        <button class="back-to-home-button" onclick="navigateTo('/')">Back To Home</button>
+    </div>
+
+    <footer>
+        <p>Contact Us: <br>abdulrafay42240@gmail.com | 03203468464</p>
+    </footer>
+
+    <script>
+        function navigateTo(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+</html>

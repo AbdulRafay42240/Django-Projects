@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Parking System</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('/static/front-pic.jpg') no-repeat center center fixed;
+            background-size: cover;
+            background-attachment: fixed;
+            color: #fff;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        .box {
+            width: 200px;
+            height: 100px;
+            background-color: rgba(200, 255, 200, 0.9);
+            color: #333;
+            text-align: center;
+            line-height: 100px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin: 10px;
+        }
+
+        .box:hover {
+            background-color: rgba(200, 255, 200, 0.7);
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Car Parking System</h1>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="box" onclick="navigateTo('add.html')">Add Vehicle</div>
+            <div class="box" onclick="navigateTo('remove.html')">Remove Vehicle</div>
+        </div>
+        <div class="row">
+            <div class="box" onclick="navigateTo('view.html')">View Parked Vehicles</div>
+            <div class="box" onclick="navigateTo('bill.html')">Vehicle Parking Bill</div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Contact Us: <br>abdulrafay42240@gmail.com | 03203468464</p>
+    </footer>
+
+    <script>
+        function navigateTo(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+</html>
